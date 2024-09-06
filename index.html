@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facemash 2.0</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; text-align: center; }
+        .comparison { display: flex; justify-content: space-around; margin-top: 20px; }
+        .image-container { width: 45%; }
+        img { max-width: 100%; height: auto; border: 1px solid #ddd; }
+        button { margin-top: 10px; padding: 10px 20px; font-size: 16px; cursor: pointer; }
+        .status { margin-top: 20px; font-size: 18px; color: green; display: none; }
+        a { display: block; margin-top: 20px; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <h1>Facemash 2.0 😈</h1>
+    <p>Vote for the hotter image 🔥 !</p>
+    
+    <div class="comparison">
+        <div class="image-container">
+            <img src="" alt="Person 1" id="image1">
+            <br>
+            <button onclick="selectImage(1)">Vote</button>
+        </div>
+        <div class="image-container">
+            <img src="" alt="Person 2" id="image2">
+            <br>
+            <button onclick="selectImage(2)">Vote</button>
+        </div>
+    </div>
+
+    <p>Upload your photo here:</p>
+    <input type="file" id="imageUpload" accept="image/*">
+    <div id="statusMessage" class="status">✅ Upload Successful!</div>
+
+    <a href="top-images.html">See Top 10 Hottest Images</a>
+
+    <script src="script.js"></script>
+</body>
+</html>
