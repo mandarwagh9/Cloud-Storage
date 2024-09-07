@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Storage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5f5f7;
+            font-family: 'Helvetica', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            padding: 40px;
+            border-radius: 20px;
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .container:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            font-size: 2.2em;
+            font-weight: 500;
+            color: #1c1c1e;
+            margin-bottom: 25px;
+        }
+
+        #uploadForm {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        input[type="file"], input[type="text"] {
+            padding: 12px;
+            border: 1px solid #e0e0e5;
+            border-radius: 8px;
+            background-color: #fafafa;
+            width: 100%;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="file"]:focus, input[type="text"]:focus {
+            outline: none;
+            border-color: #0071e3;
+        }
+
+        button {
+            padding: 12px 25px;
+            background-color: #0071e3;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #005bb5;
+            transform: translateY(-3px);
+        }
+
+        #fileList {
+            margin-top: 30px;
+            background-color: #f9f9fb;
+            padding: 20px;
+            border-radius: 15px;
+            max-height: 250px;
+            overflow-y: auto;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            text-align: left;
+        }
+
+        #fileList a {
+            display: block;
+            color: #0071e3;
+            text-decoration: none;
+            padding: 8px 0;
+            transition: color 0.3s ease;
+        }
+
+        #fileList a:hover {
+            color: #005bb5;
+        }
+
+        /* Preview area */
+        .preview-area {
+            margin-top: 30px;
+            background-color: #f9f9fb;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .preview-area img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .preview-area pre {
+            text-align: left;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .no-preview {
+            color: #555;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cloud Storage</h1>
+
+        <!-- Upload Form -->
+        <form id="uploadForm">
+            <input type="file" id="fileInput" required>
+            <input type="text" id="path" placeholder="Optional: File Path">
+            <button type="submit">Upload</button>
+        </form>
+
+        <!-- File List -->
+        <div id="fileList">
+            <h3>Uploaded Files</h3>
+        </div>
+
+        <!-- File Preview Area -->
+        <div class="preview-area" id="previewArea">
+            <h3>File Preview</h3>
+            <div id="filePreview" class="no-preview">Select a file to preview</div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="images.js"></script>
+</body>
+</html>
