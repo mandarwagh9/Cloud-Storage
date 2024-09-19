@@ -1,0 +1,60 @@
+Space Image Gallery
+Welcome to the Space Image Search Engine! This project is a web application that allows users to search, view and download images from NASA's vast collection. The gallery uses NASA's Images API to fetch and display images related to various space missions, celestial events, and astronomical phenomena.
+
+Features
+Search Functionality: Search for space images using keywords, media types, and other criteria.
+Image Display: View images with details including titles, descriptions, and dates.
+Pagination: Navigate through search results using pagination.
+Responsive Design: The gallery is designed to work on various screen sizes.
+Technologies Used
+Node.js: JavaScript runtime for building the server.
+Express.js: Web framework for Node.js to handle HTTP requests.
+EJS: Templating engine for rendering HTML views.
+HTML/CSS: For structuring and styling the web pages.
+NASA Images API: To fetch images and related data.
+Setup Instructions
+Prerequisites
+Node.js and npm installed on your machine.
+Installation
+Clone the Repository:
+
+git clone https://github.com/mandarwagh9/NASA-IMAGE-SEARCH-ENGINE.git
+Navigate to the Project Directory:
+
+cd NASA-IMAGE-SEARCH-ENGINE
+Install Dependencies:
+
+npm install
+Create a .env File:
+
+Create a file named .env in the root directory and add your NASA API key:
+
+NASA_API_KEY=your_nasa_api_key_here
+Start the Application:
+
+npm start
+The application will start and be accessible at http://localhost:5500.
+
+Usage
+Open Your Browser: Navigate to http://localhost:5500 to access the gallery.
+
+Search for Images: Use the search bar to enter keywords, select media types, and click "Search" to view results.
+
+View Image Details: Click on any image to see more details including the title, description, and publication date.
+
+Pagination: Use the pagination controls to navigate through multiple pages of search results.
+
+API Endpoints
+Search: /search?q={query} - Fetches images based on search criteria.
+Asset Details: /asset/{nasa_id} - Retrieves details of a specific media asset.
+Metadata: /metadata/{nasa_id} - Fetches metadata for a specific asset.
+Captions: /captions/{nasa_id} - Retrieves captions for video assets.
+Albums: /album/{album_name} - Retrieves images from a specific album.
+Contributing
+Feel free to contribute to this project by opening issues or submitting pull requests. For major changes, please open an issue first to discuss what you would like to change.
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+Contact
+For any questions or feedback, please contact Mandar Wagh.
